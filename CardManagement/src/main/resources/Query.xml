@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+    <query id="createCard">insert into cards (customer_id,card_number,card_type,expiry_date,status,
+        created_at,updated_at) values(:customerId,:cardNumber,:cardType,:expiryDate,'ACTIVE',NOW(),NOW())</query>
+    <query id="cancelCard">update cards set status='CANCELLED',updated_at=NOW() where customer_id=:customerId and
+    right(card_number,4)=:lastFourDigits</query>
+    <query id="getCardsByCustomerId">select * from cards where customer_id=:customerId</query>
+</queries>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+    <query id="createCustomer">INSERT INTO CUSTOMER (first_name,last_name,email,phone,address,created_at,updated_at) values(?,?,?,?,?,NOW(),NOW())</query>
+    <query id="updateCustomer">UPDATE CUSTOMER SET first_name=?,last_name=?,email=?,phone=?,address=?,updated_at=NOW() where id=?</query>
+    <query id="deleteCustomerById">DELETE FROM CUSTOMER where id=?</query>
+    <query id="getCustomerById">SELECT * FROM CUSTOMER where id=?</query>
+    <query id="getAllCustomers">SELECT * FROM CUSTOMER</query>
+</queries>
