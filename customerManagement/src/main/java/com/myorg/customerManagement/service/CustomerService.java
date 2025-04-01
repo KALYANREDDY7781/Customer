@@ -1,5 +1,6 @@
 package com.myorg.customerManagement.service;
 
+import com.myorg.customerManagement.dto.ResponseDto;
 import com.myorg.customerManagement.model.Customer;
 
 import java.util.List;
@@ -11,4 +12,6 @@ public interface CustomerService {
     int save(Customer customer);
     int update(Customer customer);
     int delete(int id);
+
+    ResponseDto fetchCustomerDetails(int id);
 }

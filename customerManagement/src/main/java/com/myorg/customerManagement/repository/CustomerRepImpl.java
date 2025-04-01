@@ -4,6 +4,7 @@ import com.myorg.customerManagement.mapper.CustomerMapper;
 import com.myorg.customerManagement.model.Customer;
 import com.myorg.customerManagement.utility.QueryLoader;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -31,7 +32,13 @@ public class CustomerRepImpl implements CustomerRepository{
     @Override
     public Customer findById(int id) {
         String sql = queryLoader.getQuery("getCustomerById");
-        return jdbcTemplate.queryForObject(sql,customerMapper,id);
+        try{
+            return jdbcTemplate.queryForObject(sql,customerMapper,id);
+        }
+        catch (IncorrectResultSizeDataAccessException e){
+            return null;
+        }
+
     }
 
     @Override

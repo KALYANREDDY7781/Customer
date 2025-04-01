@@ -2,6 +2,7 @@ package com.myorg.CardManagement.service;
 
 import com.myorg.CardManagement.dto.CardsDto;
 import com.myorg.CardManagement.entity.Card;
+import com.myorg.CardManagement.exception.CardNotFoundException;
 import com.myorg.CardManagement.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class CardsServiceimpl implements CardsService{
     public int addCard(CardsDto cardsDto) {
         boolean flag = checkIfCustomerExists(cardsDto.getCustomerId());
         if(!flag){
-            throw new RuntimeException("Customer doesn't exists with ID: "+cardsDto.getCustomerId());
+            throw new CardNotFoundException("Cards doesn't exists with ID: "+cardsDto.getCustomerId());
         }
         return cardRepository.add(cardsDto);
     }
@@ -33,7 +34,7 @@ public class CardsServiceimpl implements CardsService{
     public int cancelCard(int customerId, int lastFourDigits) {
         boolean flag = checkIfCustomerExists(customerId);
         if(!flag){
-            throw new RuntimeException("Customer doesn't exists with ID: "+customerId);
+            throw new CardNotFoundException("Cards doesn't exists with ID: "+customerId);
         }
         return cardRepository.cancel(customerId,lastFourDigits);
     }
@@ -42,7 +43,7 @@ public class CardsServiceimpl implements CardsService{
     public List<Card> getCardsByCustomerId(int customerId) {
         boolean flag = checkIfCustomerExists(customerId);
         if(!flag){
-            throw new RuntimeException("Customer doesn't exists with ID: "+customerId);
+            throw new CardNotFoundException("Cards doesn't exists with ID: "+customerId);
         }
         return cardRepository.getCards(customerId);
     }

@@ -1,12 +1,16 @@
 package com.myorg.customerManagement.controller;
 
+import com.myorg.customerManagement.dto.ResponseDto;
 import com.myorg.customerManagement.model.Customer;
 import com.myorg.customerManagement.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/customers")
@@ -20,9 +24,11 @@ public class CustomerController {
     }
 
     @PostMapping
-    public String addCustomer(@RequestBody Customer customer){
+    public ResponseEntity<Map<String, String>> addCustomer(@RequestBody Customer customer){
         customerService.save(customer);
-        return "Customer created successfully";
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Customer created successfully");
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PutMapping
@@ -55,5 +61,11 @@ public class CustomerController {
             exists = false;
         }
         return exists;
+    }
+
+    @GetMapping("/fetch/{customerId}")
+    public ResponseEntity<ResponseDto> getCustomerDetails(@PathVariable int customerId){
+        ResponseDto responseDto = customerService.fetchCustomerDetails(customerId);
+        return ResponseEntity.status(HttpStatus.OK).body(responseDto);
     }
 }
