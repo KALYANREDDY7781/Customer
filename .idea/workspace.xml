@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f625a44-5de8-4968-8778-a06f621999c7" name="Changes" comment="Updated app.properties to register with gateway server">
-      <change afterPath="$PROJECT_DIR$/gatewayserver/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/example/gatewayserver/GatewayserverApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/test/java/com/example/gatewayserver/GatewayserverApplicationTests.java" afterDir="false" />
+    <list default="true" id="5f625a44-5de8-4968-8778-a06f621999c7" name="Changes" comment="Created gateway server for authentication and routing traffic to microservices">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,8 +112,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GatewayserverApplication" />
-        <item itemvalue="Application.CustomerManagementApplication" />
         <item itemvalue="Application.CardManagementApplication" />
+        <item itemvalue="Application.CustomerManagementApplication" />
         <item itemvalue="Application.EurekaserverApplication" />
       </list>
     </recent_temporary>
@@ -141,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743680163390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created gateway server for authentication and routing traffic to microservices">
+      <option name="closed" value="true" />
+      <created>1743680304434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743680304434</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +159,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated app.properties to register with gateway server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated app.properties to register with gateway server" />
+    <MESSAGE value="Created gateway server for authentication and routing traffic to microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created gateway server for authentication and routing traffic to microservices" />
   </component>
 </project>
