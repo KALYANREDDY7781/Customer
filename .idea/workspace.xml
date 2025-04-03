@@ -9,11 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CardManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/controller/CardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/controller/CardsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/service/CardsServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/service/CardsServiceimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CardManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customerManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customerManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/kalya/Java_Projects/CustomerMS/eurekaserver",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kalya/Java_Projects/CustomerMS/gatewayserver&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.myorg.CardManagement.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CardManagementApplication">
+  <component name="RunManager" selected="Application.GatewayserverApplication">
     <configuration name="CardManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myorg.CardManagement.CardManagementApplication" />
       <module name="CardManagement" />
@@ -103,10 +99,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.gatewayserver.GatewayserverApplication" />
+      <module name="gatewayserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.gatewayserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CardManagementApplication" />
+        <item itemvalue="Application.GatewayserverApplication" />
         <item itemvalue="Application.CustomerManagementApplication" />
+        <item itemvalue="Application.CardManagementApplication" />
         <item itemvalue="Application.EurekaserverApplication" />
       </list>
     </recent_temporary>
@@ -121,5 +131,16 @@
       <updated>1743481680043</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
