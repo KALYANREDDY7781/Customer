@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5f625a44-5de8-4968-8778-a06f621999c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/controller/CardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/controller/CardsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/service/CardsServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/src/main/java/com/myorg/CardManagement/service/CardsServiceimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/repository/CustomerRepImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/repository/CustomerRepImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/src/main/java/com/myorg/customerManagement/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CardManagement/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customerManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customerManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customerManagement/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +37,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2v72ECY0lSA7LV16sXnllURThGY" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -52,6 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/kalya/Java_Projects/CustomerMS/eurekaserver",
     "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
@@ -60,7 +63,7 @@
       <recent name="com.myorg.CardManagement.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CustomerManagementApplication">
+  <component name="RunManager" selected="Application.CardManagementApplication">
     <configuration name="CardManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myorg.CardManagement.CardManagementApplication" />
       <module name="CardManagement" />
@@ -87,10 +90,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EurekaserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.eurekaserver.EurekaserverApplication" />
+      <module name="eurekaserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerManagementApplication" />
         <item itemvalue="Application.CardManagementApplication" />
+        <item itemvalue="Application.CustomerManagementApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
       </list>
     </recent_temporary>
   </component>

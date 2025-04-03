@@ -4,6 +4,9 @@ import com.myorg.CardManagement.dto.CardsDto;
 import com.myorg.CardManagement.entity.Card;
 import com.myorg.CardManagement.exception.CardNotFoundException;
 import com.myorg.CardManagement.repository.CardRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.event.LoggingEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -15,6 +18,7 @@ public class CardsServiceimpl implements CardsService{
     private final RestTemplate restTemplate;
     private final CardRepository cardRepository;
 
+    private static final Logger logger = LoggerFactory.getLogger(CardsServiceimpl.class);
     @Autowired
     public CardsServiceimpl(RestTemplate restTemplate, CardRepository cardRepository) {
         this.restTemplate = restTemplate;
@@ -25,8 +29,10 @@ public class CardsServiceimpl implements CardsService{
     public int addCard(CardsDto cardsDto) {
         boolean flag = checkIfCustomerExists(cardsDto.getCustomerId());
         if(!flag){
+            logger.error("Cards doesn't exists with ID: "+cardsDto.getCustomerId());
             throw new CardNotFoundException("Cards doesn't exists with ID: "+cardsDto.getCustomerId());
         }
+
         return cardRepository.add(cardsDto);
     }
 

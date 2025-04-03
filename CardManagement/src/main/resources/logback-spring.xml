@@ -1,0 +1,23 @@
+<configuration>
+
+    <!-- Console Logging -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder"/>
+    </appender>
+
+    <!-- Splunk HTTP Event Collector (HEC) -->
+   <!-- <appender name="SPLUNK" class="net.logstash.logback.appender.LogstashHttpAppender">
+        <url>http://localhost:8088/services/collector</url>  &lt;!&ndash; Change to your Splunk URL &ndash;&gt;
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder"/>
+        <customHeaders>
+            <header name="Authorization" value="Splunk fcc459a8-40c3-4c26-84c2-197b2d6827b3"/>
+        </customHeaders>
+    </appender>
+
+    &lt;!&ndash; Log Level Configuration &ndash;&gt;
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SPLUNK"/>
+    </root>-->
+
+</configuration>
