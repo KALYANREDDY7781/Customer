@@ -6,6 +6,7 @@ import com.myorg.customerManagement.exception.CustomerNotFoundException;
 import com.myorg.customerManagement.model.Customer;
 import com.myorg.customerManagement.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,9 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
+    @Cacheable("customers")
     public Customer findById(int id) {
+        System.out.println("Fetching details from DB for customer");
         Customer customer = customerRepository.findById(id);
         if(customer == null){
             throw new CustomerNotFoundException("Customer not found with ID: "+id);
