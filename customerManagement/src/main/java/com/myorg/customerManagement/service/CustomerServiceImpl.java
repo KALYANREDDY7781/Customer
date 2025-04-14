@@ -1,5 +1,6 @@
 package com.myorg.customerManagement.service;
 
+import com.myorg.customerManagement.dto.AddressDto;
 import com.myorg.customerManagement.dto.CardResponseDto;
 import com.myorg.customerManagement.dto.ResponseDto;
 import com.myorg.customerManagement.exception.CustomerNotFoundException;
@@ -32,7 +33,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    @Cacheable("customers")
+    @Cacheable(value="customers",key = "#id")
     public Customer findById(int id) {
         System.out.println("Fetching details from DB for customer");
         Customer customer = customerRepository.findById(id);
@@ -72,16 +73,17 @@ public class CustomerServiceImpl implements CustomerService{
             throw new CustomerNotFoundException("Customer not found with ID: "+id);
         }
         List<CardResponseDto> cards = fetchCardDetails(id);
+        AddressDto addressDto = fetchAddressByCustomerId(id).getBody();
         ResponseDto responseDto = new ResponseDto();
         responseDto.setCustomerId(id);
         responseDto.setEmail(customer.getEmail());
         responseDto.setPhone(customer.getPhone());
         responseDto.setFirst_name(customer.getFirst_name());
         responseDto.setLast_name(customer.getLast_name());
-        responseDto.setAddress(customer.getAddress());
         if(!cards.isEmpty()){
             responseDto.setCardResponseDto(cards);
         }
+        responseDto.setAddressDto(addressDto);
 
         return responseDto;
     }
@@ -95,5 +97,10 @@ public class CustomerServiceImpl implements CustomerService{
         } else {
             return List.of();  // Return empty list if no cards are found
         }
+    }
+
+    public ResponseEntity<AddressDto> fetchAddressByCustomerId(int customerId){
+        String url = "http://localhost:8087/address/"+customerId;
+        return restTemplate.getForEntity(url,AddressDto.class);
     }
 }

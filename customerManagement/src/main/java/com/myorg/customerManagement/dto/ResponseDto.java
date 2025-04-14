@@ -13,7 +13,9 @@ public class ResponseDto {
     private String last_name;
     private String email;
     private String phone;
-    private String address;
+
+    @JsonProperty("Address")
+    private AddressDto addressDto;
     @JsonProperty("Cards")
     private List<CardResponseDto> cardResponseDto;
 
@@ -57,19 +59,19 @@ public class ResponseDto {
         this.phone = phone;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public List<CardResponseDto> getCardResponseDto() {
         return cardResponseDto;
     }
 
     public void setCardResponseDto(List<CardResponseDto> cardResponseDto) {
         this.cardResponseDto = cardResponseDto;
+    }
+
+    public AddressDto getAddressDto() {
+        return addressDto;
+    }
+
+    public void setAddressDto(AddressDto addressDto) {
+        this.addressDto = addressDto;
     }
 }

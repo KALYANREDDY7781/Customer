@@ -3,8 +3,8 @@ package com.myorg.customerManagement.dto;
 import java.time.LocalDateTime;
 
 public class CardResponseDto {
-    private int id;
-    private int customerId;
+//    private int id;
+//    private int customerId;
     private String cardNumber;
     private String cardType;
     private String status;
@@ -12,13 +12,7 @@ public class CardResponseDto {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
@@ -36,13 +30,7 @@ public class CardResponseDto {
         this.updatedAt = updatedAt;
     }
 
-    public int getCustomerId() {
-        return customerId;
-    }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
 
     public String getCardNumber() {
         return cardNumber;

@@ -10,12 +10,14 @@
         <module name="eurekaserver" />
         <module name="gatewayserver" />
         <module name="customerManagement" />
+        <module name="address" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="CardManagement" options="-parameters" />
+      <module name="address" options="-parameters" />
       <module name="customerManagement" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="gatewayserver" options="-parameters" />
